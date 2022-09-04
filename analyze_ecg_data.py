@@ -40,7 +40,7 @@ for channel in EEG.channels:
     # Notches 60hz noise (if you're in Europe, switch to 50Hz)
     EEG.notch_mains_interference()
 
-    # EEG.trim_data(0, 0)
+    EEG.trim_data(3, 3)
 
     # Make signal plot
     EEG.signalplot()

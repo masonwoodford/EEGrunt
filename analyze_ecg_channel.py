@@ -9,10 +9,10 @@ import EEGrunt
 source = 'openbci'
 
 # Path to EEG data file
-path = 'data/ecg/'
+path = '/Users/masonwoodford/Documents/OpenBCI_GUI/Recordings/OpenBCISession_2022-02-27_21-25-06/'
 
 # EEG data file name
-filename = 'obci-ecg-data.txt'
+filename = 'OpenBCI-RAW-2022-02-27_21-48-15.txt'
 
 # Session title (used in some plots and such)
 session_title = "EEGrunt OpenBCI ECG Sample Data"
@@ -41,7 +41,7 @@ EEG.remove_dc_offset()
 # Notch 60hz noise (if you're in Europe, switch to 50Hz)
 EEG.notch_mains_interference()
 
-# EEG.trim_data(0, 0)
+EEG.trim_data(3, 3)
 
 # Plot some ECG
 EEG.plot_rr_intervals()
