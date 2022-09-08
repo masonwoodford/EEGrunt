@@ -9,10 +9,10 @@ import EEGrunt
 source = 'openbci'
 
 # Path to EEG data file
-path = '/Users/masonwoodford/Documents/OpenBCI_GUI/Recordings/OpenBCISession_2022-02-27_21-25-06/'
+path = '/Users/masonwoodford/Documents/OpenBCI_GUI/Recordings/OpenBCISession_2022-08-25_18-16-37/'
 
 # EEG data file name
-filename = 'OpenBCI-RAW-2022-02-27_21-48-15.txt'
+filename = 'OpenBCI-RAW-2022-08-26_20-36-12.txt'
 
 # Session title (used in some plots and such)
 session_title = "EEGrunt OpenBCI ECG Sample Data"

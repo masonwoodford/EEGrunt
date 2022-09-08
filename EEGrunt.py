@@ -74,7 +74,7 @@ class EEGrunt:
                     if(cols[1].strip() == "/muse/eeg"):
                         raw_data.append(cols[2:6])
 
-            dt = np.dtype('Float64')
+            dt = np.dtype('float64')
             raw_data = np.array(raw_data, dtype=dt)
 
         else:
@@ -102,8 +102,10 @@ class EEGrunt:
 
 
         self.raw_data = raw_data
+        print("raw data: ", self.raw_data)
 
         self.t_sec = np.arange(len(self.raw_data[:, 0])) /self.fs_Hz
+        print("t_sec: ", self.t_sec)
 
         print("Session length (seconds): "+str(len(self.t_sec)/self.fs_Hz))
         print("t_sec last: "+str(self.t_sec[:-1]))
@@ -285,6 +287,7 @@ class EEGrunt:
         print("Getting R-R Interval values...")
 
         sig1 = self.data
+        print("DATA: ", sig1[5])
 
         print("Smoothing data...")
 
@@ -436,7 +439,7 @@ class EEGrunt:
             hrv_std_array.append(hrv_std_value)
             index += 1
 
-        dt = np.dtype('Float64')
+        dt = np.dtype('float64')
         hrv_std_array = np.array(hrv_std_array, dtype=dt)
 
 
